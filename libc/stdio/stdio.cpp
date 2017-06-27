@@ -252,6 +252,10 @@ FILE* fdopen(int fd, const char* mode) {
   return __fopen(fd, flags);
 }
 
+int	 vsnprintx(char * __restrict, size_t, const char * __restrict, __va_list) {
+  return 0;
+}
+
 // Re-direct an existing, open (probably) file to some other file.
 // ANSI is written such that the original file gets closed if at
 // all possible, no matter what.

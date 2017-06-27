@@ -4337,7 +4337,7 @@ static ElfW(Addr) __linker_init_post_relocation(KernelArgumentBlock& args, ElfW(
   const char* ldpath_env = nullptr;
   const char* ldpreload_env = nullptr;
   const char* ldshim_libs_env = nullptr;
-  if (!getauxval(AT_SECURE)) {
+  // if (!getauxval(AT_SECURE)) {
     ldpath_env = getenv("LD_LIBRARY_PATH");
     if (ldpath_env != nullptr) {
       INFO("[ LD_LIBRARY_PATH set to \"%s\" ]", ldpath_env);
@@ -4347,7 +4347,7 @@ static ElfW(Addr) __linker_init_post_relocation(KernelArgumentBlock& args, ElfW(
       INFO("[ LD_PRELOAD set to \"%s\" ]", ldpreload_env);
     }
     ldshim_libs_env = getenv("LD_SHIM_LIBS");
-  }
+  // }
 
   struct stat file_stat;
   // Stat "/proc/self/exe" instead of executable_path because

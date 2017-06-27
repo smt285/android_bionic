@@ -183,6 +183,7 @@ FILE* funopen(const void*,
 int fgetpos(FILE*, fpos_t*);
 int fsetpos(FILE*, const fpos_t*);
 int fseeko(FILE*, off_t, int);
+
 off_t ftello(FILE*);
 #  if defined(__USE_BSD)
 FILE* funopen(const void*,
@@ -210,6 +211,7 @@ FILE* freopen(const char* __restrict, const char* __restrict, FILE* __restrict);
 FILE* freopen64(const char* __restrict, const char* __restrict, FILE* __restrict);
 FILE* tmpfile(void);
 FILE* tmpfile64(void);
+int	 vsnprintx(char * __restrict, size_t, const char * __restrict, __va_list);
 
 #if __ISO_C_VISIBLE >= 1999 || __BSD_VISIBLE
 int	 snprintf(char * __restrict, size_t, const char * __restrict, ...)
